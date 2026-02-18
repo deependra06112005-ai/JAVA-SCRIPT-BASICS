@@ -1,3 +1,5 @@
+const { selectLimit } = require("async");
+
 console.log("start");
 
 setTimeout(() =>{
@@ -23,6 +25,14 @@ console.log("helooo")
 setTimeout(function){
     console.log("heyy2");
 }, 2000)
+function()
+console.log()
+setTimeout console.log
+setInterval
+//Async 
+ProcessingInstruction Promise
+
+console.log
 
 
 
