@@ -33,7 +33,41 @@ setInterval
 ProcessingInstruction Promise
 
 console.log
+//question on async java script
+console.log("A")
+setTimeout (() => console.log("b"), 0);
+console.log("c");
+//out put will be A
+//B
+//C
 
+console.log("1");
+Promise.resolve().then(() => console.log("2"));
+console.log("3");
+
+ console.log("Start");
+ setTimeout(() => console.log ("timeout"), 0);
+ Promise.resolve().then(() => console.log ("promise"));
+ console.log("end");
+
+
+
+
+
+
+
+ const p = new Promise(resolve => {
+    setTimeout(()=> resolve ("hello"), 1000);
+ })
+ p.then(console.log);
+
+
+
+
+ Promise.resolve(10)
+ .then(num => num*2)
+ .then(num => num + 5 )
+ .then(console.log);
 
 
 
