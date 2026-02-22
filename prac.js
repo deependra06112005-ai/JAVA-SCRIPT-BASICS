@@ -34,3 +34,14 @@ async function async function loadDashboardSequential() {
 
                 loadDashboardSequential();
 }
+
+async function getData(){
+    try {
+        const response = await fetch("https://api.com/users");
+        const data = await response.json();
+        console.log(data);
+    }   catch (error) {
+        console.log(error);
+        
+    }
+}
