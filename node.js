@@ -14,7 +14,7 @@ app.listen(port,() =>{
 
 
 
-const http = require ('http');
+/*const http = require ('http');
 
 const server = http.createServer((req, res) =>{
     console.log(req.url , req.method, req.headers);
@@ -29,7 +29,34 @@ const server = http.createServer((req, res) =>{
 const PORT = 3003;
 server.listen(PORT, () => {
     console.log('Server running at ')
-});
+}); */
 
 
 
+const http = require ('http');
+const server = http.createServer((req, res) => {
+    res.setHeader('Content-type', 'text/html')
+    res.write('<html>');
+    res.write('<head><title>Complete Coding</title><head>');
+     
+    if(req.url ==='/'){
+        res.setHeader('Content-type', 'text/html')
+        res.write('<html>');
+        res.write('<head><title>Complete Heading</title><head>');
+        res.write('<h1> Welcome to our channel</h1>');
+        res.write('<form>');
+        res.write() 
+        res.write('</form>')
+                return res.end();
+    }else if (req.url.toLowerCase() ==='/products'){
+        res.write('<h1>Products</h1>');
+        return res.end();
+    }
+    
+})
+
+//TAking USer Input
+if (req.url==='/'){
+    res.setHeader('Content-type', '')
+    res.write()
+}
