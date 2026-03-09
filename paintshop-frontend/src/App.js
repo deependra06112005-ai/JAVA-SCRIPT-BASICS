@@ -4,6 +4,8 @@ function App(){
   const [showLowstock, setShowLowStock] = useState(false);
   const[newPaint, setNewPaint] = useState({
     name: "", price: 0, quantity: 0});
+    const [editingPaint, setEditingPaint] = useState(null);
+    const [newQuantity, setNewQuantity] = useState("");
   const [paints, setPaints ] = useState([
     { name: "Royal Shyne 10L", price: 1500, quantity: 10 }, 
     { name: "Royal Shyne 20L", price: 2800, quantity: 8 },
@@ -17,6 +19,7 @@ function App(){
     <div>
       <h1>Manu Hardware</h1>
       <h2>Paints</h2>
+      <p>Total Products: {paints.length}</p>
       <div>
         <input type ="Paint Name" placeholder ="Paint Name" value={newPaint.name}
          onChange={(e) => setNewPaint({...newPaint, name: e.target.value})}/>
@@ -24,20 +27,36 @@ function App(){
           onChange={(e) => setNewPaint({...newPaint, price: e.target.value})}/>
          <input type ="Quantity" placeholder ="Quantity" value={newPaint.quantity}
           onChange={(e) => setNewPaint({...newPaint, quantity: e.target.value})}/>  
+
+
           <button onClick={() => {
+            if(newPaint.name===""){
+              alert("Please enter a paint name")
+              return;
+            }
             setPaints([...paints, newPaint]);
             setNewPaint({ name: "", price: 0, quantity: 0 });
           }}>
-            Add Paint
+            Add Paint  
+          </button> 
+
+
+          <button onClick={() => {
+            setPaints(paints.filter(paint => paint.name !== newPaint.name));
+            setNewPaint({ name: "", price: 0, quantity: 0 });
+          }}>
+            Delete
           </button>
 
       </div>
       <button onClick={()=> setShowLowStock(!showLowstock)}>
         {showLowstock ? "Show All Paints" : "Show Low Stock"} 
-      </button>
+      </button> 
+
       {dislayPaints.map(paint => (
         <div key ={paint.name}>
           <h3>{paint.name}</h3>
+          <button onClick ={()=> setEditingPaint(paint.name)}>Edit Quantity</button>
           <p>price: {paint.price}</p>
           <p>Quantity: {paint.quantity}</p>
           <p>{paint.quantity <5 ? "red LOW Stock" : " green In Stock"}</p>
@@ -46,4 +65,4 @@ function App(){
     </div>
   )
 }
-export default App;
+export default App;    
