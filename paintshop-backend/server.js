@@ -1,28 +1,48 @@
+const mongoose = require('mongoose')
+mongoose.connect('mongodb+srv://deependra06112005_db_user:deepu0611@cluster0.lvbu2hc.mongodb.net/?appName=Cluster0').then(()=>{
+console.log("Connected to MongoDB")
+}).catch((error)=>{
+    console.log("Error:",error)
+})
+
 const express= require('express')
- const app =express()
-
-
+const app =express()
 app.use(express.json())
 
+const paintSchema = new mongoose.Schema({
+    name: String,
+    price: Number,
+    quantity: Number
+})
+const Paint = mongoose.model('Paint', paintSchema)
 
- const paints = [
-        {id:1, name:"Royal Shyne !0L", price:1500, quantity:10},
-        {id:2, name:"Royal Shyne 20L", price:2800, quantity:8},
-        {id:3, name:"Royal Luxury Shyne 20L", price:3550, quantity:5},
-        {id:4, name:"Royale Luxury Emulsion 10L", price:1500, quantity:10},
-        {id:5, name:"Royale Luxury Emulsion 20L", price:2800, quantity:8},
-    ]
+app.get('/api/paints', async (req, res) => {
+    const paints = await Paint.find()
+    res.json(paints)
+})
 
-    app.get('/api/paints',(req,res)=>{
-        res.json(paints)
-    })
-    app.post('/api/paints',(req,res)=>{
-        const newPaint = req.body
-        paints.push(newPaint)
-        res.json(newPaint)
-        
-    })
+app.post('/api/paints', async (req, res) => {
+    const paint = newPaint(req.body)
+    await paint.save()
+    res.json(paint)
+})
 
-    app.listen(3000,()=>{
+app.delete('/api/paints/:id', async (req, res) => {
+    await Paint.findByIdAndDelete(req.params.id)
+    res.json({ message: "Paint deleted successfully" })
+})
+
+app.put('/api/paints/:id', async (req, res) => {
+    const updatedPaint = await Paint.findByIdAndUpdate(req.params.id, req.body,)
+    res.json(paint)
+
+})
+
+app.listen(3000,()=>{
     console.log("Server is running on port 3000")
-    })
+})
+
+
+
+
+
