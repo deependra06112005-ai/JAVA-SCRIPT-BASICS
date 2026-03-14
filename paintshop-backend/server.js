@@ -4,10 +4,11 @@ console.log("Connected to MongoDB")
 }).catch((error)=>{
     console.log("Error:",error)
 })
-
+const cors = require('cors')
 const express= require('express')
 const app =express()
 app.use(express.json())
+app.use(cors())
 
 const paintSchema = new mongoose.Schema({
     name: String,
