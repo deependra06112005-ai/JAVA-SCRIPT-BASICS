@@ -12,16 +12,16 @@ const paintSchema = new mongoose.Schema({
 })
 const Paint = mongoose.model('Paint', paintSchema)
 
-const seedData = [
-    { name: "Royal Shyne", price: 19.99, quantity: 10 },
-    { name: "Royal Luxuxry Shyne", price: 29.99, quantity: 5 },
-    { name: "Royale Luxury Emulsion", price: 24.99, quantity: 8 },
-    { name: "Apcolite Premium Gloss Enamel", price: 14.99, quantity: 15 },
-    { name: "Tractor Sparc", price: 9.99, quantity: 20 },
-    { name: "Dulux Weathershield", price: 34.99, quantity: 12 }
-]
-
-Paint.insertMany(seedData).then(() => {
+async function seed(){
+    await Paint.deleteMany({})
+    await Paint.insertMany([
+        { name: "Royal Shyne", price: 4500, quantity: 10 },
+        { name: "Royal Luxuxry Shyne", price: 3800, quantity: 5 },
+        { name: "Royale Luxury Emulsion", price: 2499, quantity: 8 },
+        { name: "Apcolite Premium Gloss Enamel", price: 2800, quantity: 15 },
+        { name: "Tractor Sparc", price: 2300, quantity: 20 },
+        { name: "Dulux Weathershield", price: 3750, quantity: 12 }
+    ])
     console.log("Data added successfully")
     process.exit()
-})
+}
