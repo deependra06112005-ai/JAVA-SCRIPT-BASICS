@@ -9,14 +9,14 @@ function App() {
   const[newQuantity, setNewQuantity]=useState(0)
 
   useEffect(()=>{
-    fetch("http://127.0.0.1:3000/api/paints")
+    fetch("https://manuhardware-backend.onrender.com")
     .then(res=>res.json())
     .then(data=>setpaints(data))
   },[])
 
   const addPaint =()=>{
     if(!newPaint.name) return alert("Please enter a name")
-      fetch('http://127.0.0.1:3000/api/paints',{
+      fetch('https://manuhardware-backend.onrender.com',{
         method:'POST',
         headers:{'Content-Type':'application/json'},
         body:JSON.stringify(newPaint)
@@ -27,14 +27,14 @@ function App() {
   }
 
   const deletePaint =(id)=>{
-    fetch(`http://127.0.0.1:3000/api/paints/${id}`,{
+    fetch(`https://manuhardware-backend.onrender.com/${id}`,{
       method:'DELETE'
     })
     .then(() => setpaints(paints.filter(p => p._id !== id)))
   }
 
   const updateQuantity =(id)=>{
-    fetch(`http://127.0.0.1:3000/api/paints/${id}`,{
+    fetch(`https://manuhardware-backend.onrender.com/${id}`,{
       method:'PUT',
       headers:{'Content-Type':'application/json'}, 
       body:JSON.stringify({quantity: Number(newQuantity)})
