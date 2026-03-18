@@ -10,7 +10,7 @@ const app =express()
 app.use(express.json())
 
     app.use(cors({
-        origin: 'https://manuhardware.vercel.app/'
+        origin: 'https://manuhardware-paintshop-app.vercel.app//'
     }))
 
 
