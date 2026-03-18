@@ -8,7 +8,11 @@ const cors = require('cors')
 const express= require('express')
 const app =express()
 app.use(express.json())
-app.use(cors())
+
+    app.use(cors({
+        origin: 'https://manuhardware.vercel.app/'
+    }))
+
 
 const paintSchema = new mongoose.Schema({
     name: String,
