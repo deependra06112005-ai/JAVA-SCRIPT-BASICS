@@ -3,3 +3,6 @@
 //POST => SERVER PAR DATA SEND KARNA HAI TOHH USE KARTE HAI
 //PATCH =>SERVER PAR DATA ALREADY HO AUR US DATA KO UPDATE KRNA HO TOH TAB KARTE HAII
 //DELETE => SERVER PR DATA HAI US DELETE KARNA HO
+//REST Api
+//req.params.id-- url se id nikalta haii 
+//req.json -- frontend ko data bhejta haii 
