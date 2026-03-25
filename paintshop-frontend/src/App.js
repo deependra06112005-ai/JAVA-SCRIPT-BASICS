@@ -2,7 +2,7 @@ import {useState, useEffect} from "react";
 import './App.css'
 
 function App() {
-  const[paints, setpaints]=useState([])
+  const[paints, setPaints]=useState([])
   const[showLowstock, setShowLowStock]=useState(false)
   const[newPaint, setNewPaint]=useState({name:"",price:0,quantity:0})
   const[editingPaint, setEditingPaint]=useState(null)
