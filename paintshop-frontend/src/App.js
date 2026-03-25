@@ -32,7 +32,7 @@ function App() {
     })
     .then(() => setpaints(paints.filter(p => p._id !== id)))
   }
-
+//Editing quantity of paint 
   const updateQuantity =(id)=>{
     fetch(`https://manuhardware-backend.onrender.com/api/paints/${id}`,{
       method:'PUT',
