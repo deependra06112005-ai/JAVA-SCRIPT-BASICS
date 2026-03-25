@@ -71,14 +71,14 @@ function App() {
           </div>
           <div className="paint-actions">
           <button className="btn-delete" onClick={() => deletePaint(paint._id)}>Delete</button>
-          {editingPaint===paint.id ? (
+          {editingPaint===paint._id ? (
             <span className="edit-box">
               <input value = {newQuantity} onChange={e => setNewQuantity(e.target.value)} />
               <button onClick={() => updateQuantity(paint._id)}>Save</button>
               <button onClick={()=> setEditingPaint(null)}>Cancel</button>
             </span>
             )  : (
-              <button className = "btn-edit"onClick={() => setEditingPaint(paint._id)}>Edit Quantity</button>
+              <button className = "btn-edit" onClick={() => setEditingPaint(paint._id)}>Edit Quantity</button>
             )}
         </div>
     </div>
