@@ -41,7 +41,7 @@ function App() {
     })
     .then(res=>res.json())
     .then(()=>{ 
-      setpaints(paints.map(p => p._id === id ? {...p, quantity: Number(newQuantity)} : p));
+      setPaints(paints.map(p => p._id === id ? {...p, quantity: Number(newQuantity)} : p));
       setEditingPaint(null);
       setNewQuantity("");
     });
