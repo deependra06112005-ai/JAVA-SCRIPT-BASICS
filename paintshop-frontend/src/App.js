@@ -42,10 +42,11 @@ function App() {
     .then(res=>res.json())
     .then(()=>{ 
       setPaints(paints.map(p => p._id === id ? {...p, quantity: Number(newQuantity)} : p));
-      setEditingPaint(null);
+      setEditingPaint(null); 
       setNewQuantity("");
-    });
-  } ;
+    }); 
+  } ; 
+  // Filter paints based on low stock 
 
   const filteredPaints = showLowstock ? paints.filter(p => p.quantity < 5) : paints
 
