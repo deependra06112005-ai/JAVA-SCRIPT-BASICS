@@ -40,12 +40,12 @@ function App() {
       body:JSON.stringify({quantity: Number(newQuantity)})
     })
     .then(res=>res.json())
-    .then(()=>{
-      setpaints(paints.map(p => p._id === id ? {...p, quantity: Number(newQuantity)} : p))
-      setEditingPaint(null)
-      setNewQuantity("")
-    })
-  } 
+    .then(()=>{ 
+      setpaints(paints.map(p => p._id === id ? {...p, quantity: Number(newQuantity)} : p));
+      setEditingPaint(null);
+      setNewQuantity("");
+    });
+  } ;
 
   const filteredPaints = showLowstock ? paints.filter(p => p.quantity < 5) : paints
 
