@@ -37,9 +37,8 @@ app.delete('/api/paints/:id', async (req, res) => {
 })
 
 app.put('/api/paints/:id', async (req, res) => {
-    const updatedPaint = await Paint.findByIdAndUpdate(req.params.id, req.body,)
-    res.json(paint)
-
+    const updatedPaint = await Paint.findByIdAndUpdate(req.params.id, req.body, { new: true })
+    res.json(updatedPaint)
 })
 
 app.listen(3000,()=>{
