@@ -26,7 +26,7 @@ app.get('/api/paints', async (req, res) => {
 })
 
 app.post('/api/paints', async (req, res) => {
-    const paint = newPaint(req.body)
+    const paint = new Paint(req.body)
     await paint.save()
     res.json(paint)
 })
