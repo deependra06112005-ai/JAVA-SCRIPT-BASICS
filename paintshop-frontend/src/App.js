@@ -11,7 +11,7 @@ function App() {
   useEffect(()=>{
     fetch("https://manuhardware-backend.onrender.com/api/paints")
     .then(res=>res.json())
-    .then(data=>setpaints(data))
+    .then(data=>setPaints(data))
   },[])
 
   const addPaint =()=>{
@@ -22,7 +22,7 @@ function App() {
         body:JSON.stringify(newPaint)
       })
       .then(res=>res.json())
-      .then(data=> setpaints([...paints,data]))
+      .then(data=> setPaints([...paints,data]))
       setNewPaint({name:"",price:0,quantity:0})
   }
 
@@ -30,7 +30,7 @@ function App() {
     fetch(`https://manuhardware-backend.onrender.com/api/paints/${id}`,{
       method:'DELETE'
     })
-    .then(() => setpaints(paints.filter(p => p._id !== id)))
+    .then(() => setPaints(paints.filter(p => p._id !== id)))
   }
 //Editing quantity of paint 
   const updateQuantity =(id)=>{
