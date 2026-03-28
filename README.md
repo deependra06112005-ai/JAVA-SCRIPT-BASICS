@@ -19,3 +19,4 @@ https://manuhardware-paintshop-app.vercel.app
 -Database: MongoDB Atlas
 -Deployed:Vercel + Render 
 
+Next i learn about authentication and login security and many more Like Jwt authentication so..i work on it
