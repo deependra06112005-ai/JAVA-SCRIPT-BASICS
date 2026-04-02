@@ -8,3 +8,4 @@ Sending emails
 Posting on social media
 Fetching data from APIs
 Connecting apps like Google Sheets, Telegram, WhatsApp, etc.
+today i learn workflow node and canva in n8n and make a mini project like gmail trigger to google sheets
