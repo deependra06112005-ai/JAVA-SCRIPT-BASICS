@@ -9,3 +9,16 @@ Posting on social media
 Fetching data from APIs
 Connecting apps like Google Sheets, Telegram, WhatsApp, etc.
 today i learn workflow node and canva in n8n and make a mini project like gmail trigger to google sheets
+1. Instagram Auto Reply Bot
+Flow:
+New DM trigger
+Send to AI
+AI generates reply
+Send message back
+2. WhatsApp Lead Qualification Bot
+Flow:
+User sends message
+AI asks questions
+Stores data in Google Sheets
+Sends qualified leads
+
