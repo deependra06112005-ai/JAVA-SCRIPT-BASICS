@@ -21,4 +21,14 @@ User sends message
 AI asks questions
 Stores data in Google Sheets
 Sends qualified leads
+📌 API kya hota hai?
+API = bridge between two software
+👉 Example:
+n8n ↔ WhatsApp
+n8n ↔ Google Sheets
+n8n ↔ AI
+🔑 API Concepts:
+Request (data bhejna)
+Response (data lena)
+JSON format
 
