@@ -31,4 +31,20 @@ n8n ↔ AI
 Request (data bhejna)
 Response (data lena)
 JSON format
+🔥 13. n8n vs Other Tools (Theory)
+Feature
+n8n
+Zapier
+Coding
+Allowed
+No
+Flexibility
+High
+Medium
+Cost
+Free/self-host
+Paid
+AI Integration
+Advanced
+Limited
 
