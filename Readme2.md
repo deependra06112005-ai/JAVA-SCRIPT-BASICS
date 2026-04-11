@@ -47,4 +47,4 @@ Paid
 AI Integration
 Advanced
 Limited
-
+N8n
