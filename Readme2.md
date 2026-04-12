@@ -48,3 +48,29 @@ AI Integration
 Advanced
 Limited
 N8n
+🔷 4. Types of Nodes
+🔹 1. Trigger Nodes
+Workflow start karte hain
+Examples:
+Webhook
+Schedule (Cron)
+App triggers
+🔹 2. Action Nodes
+Task perform karte hain
+Examples:
+Send email
+Save data
+API call
+🔹 3. Core Nodes
+Logical operations
+Examples:
+IF (condition)
+Set (data modify)
+Function (custom code)
+🔷 5. Working Principle
+👉 Step-by-step:
+Trigger activate hota hai
+Data input aata hai
+Nodes process karte hain
+Output generate hota hai
+👉 Flow:
