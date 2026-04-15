@@ -74,3 +74,8 @@ Data input aata hai
 Nodes process karte hain
 Output generate hota hai
 👉 Flow:
+n8n = Node-based automation tool
+Workflow = Nodes + Connections
+Trigger → Process → Output
+Open-source + Self-hosted
+AI + API support
