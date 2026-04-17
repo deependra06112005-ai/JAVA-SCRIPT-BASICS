@@ -79,3 +79,13 @@ Workflow = Nodes + Connections
 Trigger → Process → Output
 Open-source + Self-hosted
 AI + API support
+
+N8n 🔄  Workflow Explanation (Step-by-Step)
+🔹 Step 1: Webhook Trigger
+User form fill karta hai
+Data webhook me aata hai
+👉 Example data:
+
+Name: Rahul  
+Email: rahul@gmail.com  
+Query: I want website development
