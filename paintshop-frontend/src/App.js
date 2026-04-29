@@ -95,7 +95,7 @@ function App(){
 
   return (
     <div className="container">
-      <h1>Manu Hardware - Paint Shop</h1>
+      <h1> Hardware - Paint Shop</h1>
       <p className="stats">Total Products: {paints.length}</p>
       <button className="btn-filter" onClick={logout}>Logout</button>
       <button className="btn-filter" onClick={() => setShowLowStock(!showLowstock)}>
