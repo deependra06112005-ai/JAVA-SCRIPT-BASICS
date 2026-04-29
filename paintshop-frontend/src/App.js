@@ -83,7 +83,7 @@ function App(){
 
   if(!token) return (
     <div className="container">
-      <h1>Manu Hardware - Login</h1>
+      <h1>Hardware Shop- Login</h1>
       <div className="add-form">
         <h2>Owner Login</h2>
         <input placeholder="Username" onChange={e => setUsername(e.target.value)} />
