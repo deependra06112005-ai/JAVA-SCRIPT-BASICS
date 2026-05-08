@@ -90,3 +90,15 @@ Name: Rahul
 Email: rahul@gmail.com  
 Query: I want website development
 n8n concept 
+
+
+
+
+#I Made this project in academic break..!!2025-2026 
+#AI ChatBot Telegram E-commerce
+#4May2026-8 May 2026 
+#Selling On fivver my account link..:
+
+i made a work flow of AI Telegram ecommerce bot 
+it includes shopify,mens clothing,womens clothing..
+ai chat bot ,ai development, ai automation 
